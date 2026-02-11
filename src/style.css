@@ -1,0 +1,91 @@
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  color: #213547;
+  background-color: #ffffff;
+}
+
+body {
+  margin: 0;
+  padding: 1rem;
+  min-width: 320px;
+}
+
+h1 {
+  font-size: 1.5rem;
+  margin: 0 0 1rem 0;
+  color: #333;
+}
+
+h2 {
+  font-size: 1.2rem;
+  margin: 1rem 0 0.5rem 0;
+  color: #555;
+}
+
+#app {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.controls {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+
+button {
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  padding: 0.5rem 1rem;
+  font-size: 0.9rem;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: #f9f9f9;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+button:hover {
+  border-color: #646cff;
+  background-color: #fff;
+}
+
+button:active {
+  transform: translateY(1px);
+}
+
+#cleanup {
+  background-color: #fee;
+  border-color: #fcc;
+}
+
+#cleanup:hover {
+  background-color: #fdd;
+  border-color: #f99;
+}
+
+.info {
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  padding: 1rem;
+  background-color: #fafafa;
+}
+
+#log {
+  text-align: left;
+  font-family: 'Courier New', monospace;
+  font-size: 0.85rem;
+  max-height: 400px;
+  overflow-y: auto;
+  white-space: pre-wrap;
+  word-break: break-all;
+}
+
+#log:empty::before {
+  content: "No logs yet. Click buttons above to test mesh colors.";
+  color: #999;
+  font-style: italic;
+}
