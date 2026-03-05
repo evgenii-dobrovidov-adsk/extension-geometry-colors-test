@@ -49,15 +49,15 @@ function log(message: string, data?: any) {
   logEl.scrollTop = logEl.scrollHeight;
 }
 
-// Initialize Forma SDK
+// Initialize Forma Site Design SDK
 async function initializeForma() {
   try {
-    log('Initializing Forma SDK...');
-    // The Forma SDK auto-initializes when imported from /auto
-    log('✓ Forma SDK initialized successfully');
+    log('Initializing Forma Site Design SDK...');
+    // The Forma Site Design SDK auto-initializes when imported from /auto
+    log('✓ Forma Site Design SDK initialized successfully');
     return true;
   } catch (error) {
-    log('✗ Failed to initialize Forma SDK', error);
+    log('✗ Failed to initialize Forma Site Design SDK', error);
     return false;
   }
 }
@@ -274,14 +274,14 @@ function setupUI() {
 // Application entry point
 async function main() {
   log('=== Geometry Colors Test Extension ===');
-  log('Testing vertex color rendering in Forma meshes');
+  log('Testing vertex color rendering in Forma Site Design meshes');
   log('');
   
   setupUI();
   
   const initialized = await initializeForma();
   if (!initialized) {
-    log('⚠️ Extension may not function properly without Forma SDK');
+    log('⚠️ Extension may not function properly without Forma Site Design SDK');
   }
 }
 

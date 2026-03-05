@@ -2,12 +2,12 @@
 
 ## For the User: Testing the Extension
 
-### 1. Load in Forma
+### 1. Load in Forma Site Design
 - Dev server is running at: **http://localhost:5173**
 - Manifest URL: **http://localhost:5173/manifest.json**
 
-### 2. In Autodesk Forma:
-1. Open your Forma project
+### 2. In Autodesk Forma Site Design:
+1. Open your Forma Site Design project
 2. Load the extension using the manifest URL above
 3. The extension UI should appear with 5 buttons
 
@@ -38,7 +38,7 @@ The log panel shows:
 
 ```
 extension-geometry-colors-test/
-├── manifest.json          ← Forma extension config
+├── manifest.json          ← Forma Site Design extension config
 ├── index.html            ← Extension UI
 ├── README.md             ← Full documentation
 ├── src/
@@ -65,7 +65,7 @@ extension-geometry-colors-test/
 
 The testing notes document potential causes:
 1. Color format (uint8 vs normalized floats)
-2. Lighting/material settings in Forma
+2. Lighting/material settings in Forma Site Design
 3. Color space issues
 4. API changes
 

@@ -1,16 +1,16 @@
-# Geometry Colors Test - Forma Extension POC
+# Geometry Colors Test - Forma Site Design Extension POC
 
 ## Overview
 
 ![Screenshot](./screenshot.png)
 
-This is a proof-of-concept Autodesk Forma extension that demonstrates how to add colored meshes to the 3D scene using the Forma Embedded View SDK. The extension showcases vertex color rendering with various geometric shapes and color configurations.
+This is a proof-of-concept Autodesk Forma Site Design extension that demonstrates how to add colored meshes to the 3D scene using the Forma Site Design Embedded View SDK. The extension showcases vertex color rendering with various geometric shapes and color configurations.
 
 ## Project Structure
 
 ```
 extension-geometry-colors-test/
-├── manifest.json          # Extension manifest for Forma
+├── manifest.json          # Extension manifest for Forma Site Design
 ├── index.html            # Extension UI
 ├── src/
 │   ├── main.ts          # Main extension logic
@@ -37,7 +37,7 @@ All meshes are positioned above the terrain surface using the Terrain API.
 
 - Node.js 16 or higher
 - npm or pnpm
-- Access to Autodesk Forma
+- Access to Autodesk Forma Site Design
 
 ### Installation
 
@@ -54,17 +54,17 @@ All meshes are positioned above the terrain surface using the Terrain API.
    ```
    The extension will be available at `http://localhost:5173`
 
-### Loading in Forma
+### Loading in Forma Site Design
 
-1. Open Autodesk Forma in your browser
+1. Open Autodesk Forma Site Design in your browser
 2. Navigate to a project/proposal
 3. Add this extension using the manifest URL:
    - Development: Point to `http://localhost:5173/manifest.json`
-   - Or use Forma's extension loading interface
+   - Or use Forma Site Design's extension loading interface
 
 ## Usage
 
-Once loaded in Forma:
+Once loaded in Forma Site Design:
 
 1. Click **"Add Red Sphere"** to create a red sphere
 2. Click **"Add Green Cube"** to create a green cube
@@ -103,7 +103,7 @@ function makeVertexColors(vertexCount: number, r: number, g: number, b: number, 
 
 ### Transform Matrix
 
-Forma uses 4x4 transformation matrices (column-major order) with translation in meters:
+Forma Site Design uses 4x4 transformation matrices (column-major order) with translation in meters:
 ```typescript
 const transform: [number, ...] = [
   1, 0, 0, 0,  // Column 1 (X-axis)
@@ -136,7 +136,7 @@ const height = elevation + 10; // 10 meters above terrain
 1. **Use triangle soup instead of indexed geometry** for reliable mesh rendering
 2. **Get terrain elevation** before positioning meshes to ensure they appear above ground
 3. **Column-major transform matrices** with translation values in the last column
-4. **Z-axis is vertical** (up direction) in the Forma coordinate system
+4. **Z-axis is vertical** (up direction) in the Forma Site Design coordinate system
 5. **All coordinates are in meters**
 
 ## Building for Production
@@ -149,8 +149,8 @@ This creates a `dist/` folder with the compiled extension. Update the manifest U
 
 ## References
 
-- [Forma Embedded View SDK Docs](https://app.autodeskforma.com/forma-embedded-view-sdk/docs/)
-- [Forma API Tutorial](https://aps.autodesk.com/en/docs/forma/v1/embedded-views/tutorial/)
+- [Forma Site Design Embedded View SDK Docs](https://app.autodeskforma.com/forma-embedded-view-sdk/docs/)
+- [Forma Site Design API Tutorial](https://aps.autodesk.com/en/docs/forma/v1/embedded-views/tutorial/)
 - [RenderApi Interface](https://app.autodeskforma.com/forma-embedded-view-sdk/docs/interfaces/render.RenderApi.html)
 - [TerrainApi Interface](https://app.autodeskforma.com/forma-embedded-view-sdk/docs/interfaces/terrain.TerrainApi.html)
 
@@ -160,6 +160,6 @@ This is a proof-of-concept demonstration project.
 
 ## Support
 
-For questions about Forma extensions:
-- [Forma Developer Forum](https://forums.autodesk.com/t5/forma-developer-forum/bd-p/forma-developer-forum-en)
-- [Forma API Documentation](https://aps.autodesk.com/en/docs/forma/v1/)
+For questions about Forma Site Design extensions:
+- [Forma Site Design Developer Forum](https://forums.autodesk.com/t5/forma-developer-forum/bd-p/forma-developer-forum-en)
+- [Forma Site Design API Documentation](https://aps.autodesk.com/en/docs/forma/v1/)
